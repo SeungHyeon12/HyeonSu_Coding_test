@@ -1,0 +1,25 @@
+INPUT = input().split(' ')
+
+card_num = int(INPUT[0])
+dest_num = int(INPUT[1])
+
+cards = input().split(' ')
+
+cards_int = list()
+temp = 0
+
+for i in range(card_num) :
+    cards_int.append(int(cards[i]))
+    
+for i in range(card_num-2) :
+    for k in range(i+1,card_num -1):
+        for j in range(k+1,card_num) :
+            summage = cards_int[i] +cards_int[j] +cards_int[k]
+            if summage <= dest_num :
+                if temp < summage :
+                    temp = summage
+            else :
+                continue
+                
+print(temp)
+            
