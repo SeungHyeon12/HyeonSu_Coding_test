@@ -1,0 +1,20 @@
+a = int(input())
+
+
+def div_num(a) :
+    div_c = 0
+    temp = a
+    list_t = list()
+
+    while temp >= 1 :
+        list_t.append(temp%10)
+        temp //= 10
+    return sum(list_t)
+        
+result = 0
+for i in range(a) :
+    if i + div_num(i) == a :
+        result = i
+        break
+
+print(result)
