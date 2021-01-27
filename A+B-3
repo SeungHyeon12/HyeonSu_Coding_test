@@ -1,0 +1,9 @@
+k = int(input())
+temp = list()
+for i in range(k) :
+    a, b = (input().split(' '))
+    temp.append(int(a)+int(b))
+
+for i in range(k) :
+    print(temp[i])
+    
